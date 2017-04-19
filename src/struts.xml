@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="2017-3-29project2" namespace="/" extends="struts-default">
+        <action name="addVoteAction"  class="com.xf.action.AddVoteAction" method="addVoteAction">
+			<result name="SUCCESS">/AddVote.jsp</result>
+			<result name="ERROR">/AddVote.jsp</result>
+		</action>
+		<action name="showVoteAction" class="com.xf.action.ShowVoteAction" method="showVoteAction">
+			<result name="SUCCESS">/showVoteAction.jsp</result>
+			<result name="ERROR">/showVoteAction.jsp</result>
+		</action>
+		<action name="deleteVote" class="com.xf.action.deleteVote" method="deletevote">
+				<result name="SUCCESS" type="redirectAction">/showVoteAction</result>
+				<result name="ERROR">/showVoteAction.jsp</result>
+		</action>
+		
+		<action name="showVoteByChannel" class="com.xf.action.ShowVoteByChannnelAction" method="showVoteByChannelIDAction">
+				<result name="SUCCESS" >/index.jsp</result>
+				<result name="input">/index.jsp</result>
+		</action>
+	</package>
+</struts>
